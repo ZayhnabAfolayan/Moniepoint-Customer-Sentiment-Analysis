@@ -40,11 +40,11 @@ moniepoint-sentiment-analysis/
 ```
 Dataset Schema
 # Column	                         Type	                          Description
-reviewer	                       STRING	                        Google Play username
-rating	                          INT	                          Star rating (1–5)
+reviewer	                       STRING	                     Google Play username
+rating	                          INT	                           Star rating (1–5)
 review_text	                     STRING	                        Raw review content
 review_date	                      DATE                          Date of review
-helpful_count	                    INT	                          Number of users who found the review helpful
+helpful_count	                    INT	                        Number of users who found the review helpful
 app_version	                      STRING	                      App version at time of review
 platform	                        STRING	                      Google Play / App Store
 sentiment	                        STRING	                      Positive / Neutral / Negative
