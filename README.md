@@ -54,10 +54,25 @@ SELECT
 FROM `moniepoint_sentiment.reviews`
 GROUP BY sentiment
 ORDER BY total_reviews DESC;
+https://github.com/ZayhnabAfolayan/Moniepoint-Customer-Sentiment-Analysis/blob/main/Overall%20Sentiment%20Breakdown.png
+
+Query 2 — Sentiment by Star Rating
+SELECT
+    rating,
+    COUNT(*) AS total_reviews,
+    SUM(CASE WHEN sentiment = 'Positive' THEN 1 ELSE 0 END) AS positive_count,
+    SUM(CASE WHEN sentiment = 'Neutral' THEN 1 ELSE 0 END) AS neutral_count,
+    SUM(CASE WHEN sentiment = 'Negative' THEN 1 ELSE 0 END) AS negative_count,
+    ROUND(AVG(sentiment_score), 4) AS avg_sentiment_score
+FROM `moniepoint_sentiment.reviews`
+GROUP BY rating
+ORDER BY rating DESC;
 
 
 
 
 
 
-Tech 
+
+
+
