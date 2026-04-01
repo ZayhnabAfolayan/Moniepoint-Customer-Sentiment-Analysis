@@ -55,7 +55,7 @@ FROM `moniepoint_sentiment.reviews`
 GROUP BY sentiment
 ORDER BY total_reviews DESC;
 
-![image alt](https://github.com/ZayhnabAfolayan/Moniepoint-Customer-Sentiment-Analysis/blob/main/Overall%20Sentiment%20Breakdown.png?raw=true)
+![image alt](https://github.com/ZayhnabAfolayan/Moniepoint-Customer-Sentiment-Analysis/blob/989a8d6157f5e9a8ef125c3a92db221ef88af0da/Overall%20Sentiment%20Breakdown.png)
 
 
 
