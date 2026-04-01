@@ -15,6 +15,30 @@ What are users most unhappy about? (complaint pattern analysis)
 Which reviews did other users find most helpful — and what do they say?
 Do newer app versions improve or worsen user sentiment?
 
+Tech Stack
+# Layer	                          Tool
+Data Collection	Python            Google-play-scraper
+Data Cleaning	Python              Pandas
+Sentiment Scoring	Python          TextBlob
+Storage & Analysis	              Google BigQuery (SQL)
+Documentation	                    GitHub · Notion
+
+# Project Structure
+```
+moniepoint-sentiment-analysis/
+│
+├── scrape_reviews.py        # Scrapes 2,000 Google Play reviews
+├── sentiment_analysis.py    # Cleans data + scores sentiment
+├── moniepoint_reviews_clean.csv  # Final clean dataset (2,000 rows, 10 cols)
+├── queries/
+│   ├── 01_sentiment_overview.sql
+│   ├── 02_sentiment_by_rating.sql
+│   ├── 03_complaint_analysis.sql
+│   ├── 04_helpful_reviews.sql
+│   └── 05_sentiment_by_version.sql
+└── README.md
+```
+
 
 
 Tech 
