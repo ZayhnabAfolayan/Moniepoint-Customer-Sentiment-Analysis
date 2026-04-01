@@ -38,6 +38,34 @@ moniepoint-sentiment-analysis/
 │   └── 05_sentiment_by_version.sql
 └── README.md
 ```
+Dataset Schema
+# Column	                         Type	                          Description
+reviewer	                       STRING	                        Google Play username
+rating	                          INT	                          Star rating (1–5)
+review_text	                     STRING	                        Raw review content
+review_date	                      DATE                          Date of review
+helpful_count	                    INT	                          Number of users who found the review helpful
+app_version	                      STRING	                      App version at time of review
+platform	                        STRING	                      Google Play / App Store
+sentiment	                        STRING	                      Positive / Neutral / Negative
+sentiment_score	                  FLOAT	                        TextBlob polarity score (-1 to +1)
+review_month	                    STRING	                      Year-month for trend analysis
+
+SQL Queries
+Query 1 — Overall Sentiment Breakdown
+```sql
+SELECT
+    sentiment,
+    COUNT(*) AS total_reviews,
+    ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER(), 2) AS percentage,
+    ROUND(AVG(sentiment_score), 4) AS avg_sentiment_score,
+    ROUND(AVG(rating), 2) AS avg_rating
+FROM `moniepoint_sentiment.reviews`
+GROUP BY sentiment
+ORDER BY total_reviews DESC;
+```
+
+
 
 
 
