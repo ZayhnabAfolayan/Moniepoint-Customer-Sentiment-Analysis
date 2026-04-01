@@ -54,7 +54,8 @@ SELECT
 FROM `moniepoint_sentiment.reviews`
 GROUP BY sentiment
 ORDER BY total_reviews DESC;
-![Image alt](https://github.com/ZayhnabAfolayan/Moniepoint-Customer-Sentiment-Analysis/blob/7fb99462533061eb8304ce6651d0b6574b7a082d/Overall%20Sentiment%20Breakdown.png)
+
+![image alt](https://github.com/ZayhnabAfolayan/Moniepoint-Customer-Sentiment-Analysis/blob/7fb99462533061eb8304ce6651d0b6574b7a082d/Overall%20Sentiment%20Breakdown.png)
 
 
 Query 2 — Sentiment by Star Rating
